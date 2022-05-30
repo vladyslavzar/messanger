@@ -35,7 +35,7 @@ const OpenConversation: FC = () => {
                     {selectedConversation.messages.map((message: any, i: number) => {
                         const lastMessage = selectedConversation.messages.length -1 === i;
                         return (
-                            <div className={`my-1 d-flex flex-column ${message.fromMe ? 'align-self-end' : 'align-self-start'}`} ref={lastMessage ? setRef : null} key={i}>
+                            <div className={`my-1 d-flex flex-column ${message.fromMe ? 'align-self-end align-items-end' : 'align-self-start align-items-start'}`} ref={lastMessage ? setRef : null} key={i}>
                                 <div className={`rounded px-2 py-1 ${message.fromMe ? 'bg-primary text-white' : 'border'}`}>
                                     {message.text}
                                 </div>

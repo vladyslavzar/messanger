@@ -27,11 +27,11 @@ const NewContactModal:FC<iModal> = ({closeModal}) => {
                         <Form.Label>ID</Form.Label>
                         <Form.Control type="text" ref={idRef} required />
                     </Form.Group>
-                    <Form.Group>
+                    <Form.Group style={{marginTop: '15px'}}>
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="text" ref={nameRef} required />
                     </Form.Group>
-                    <Button type='submit'>Create</Button>
+                    <Button type='submit' style={{marginTop: '15px'}}>Create</Button>
                 </Form>
             </Modal.Body>
         </>

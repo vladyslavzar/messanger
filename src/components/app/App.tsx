@@ -4,7 +4,6 @@ import useLocalStorage from '../../hooks/useLocalStorage';
 import Dashboard from '../dashboard/Dashboard';
 import { ContactsProvider } from '../../contexts/ContactsProvider';
 import { ConversationsProvider } from '../../contexts/ConversationsProvider';
-import { SocketProvider } from '../../contexts/SocketProvider';
 import {io} from 'socket.io-client';
 
 
@@ -13,7 +12,7 @@ const App:FC = () => {
   const [socket, setSocket] = useState<any>();
 
   useEffect(():any => {
-      const newSocket = io('http://localhost:8080', 
+      const newSocket = io('https://mysterious-depths-86557.herokuapp.com/', 
           {query: {id}}
       )
       setSocket(newSocket);

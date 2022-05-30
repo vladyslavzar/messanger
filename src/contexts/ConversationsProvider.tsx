@@ -1,7 +1,6 @@
 import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 import { useContacts } from './ContactsProvider';
-import { useSocket } from './SocketProvider';
 import {io} from 'socket.io-client';
 
 interface iConversation {
